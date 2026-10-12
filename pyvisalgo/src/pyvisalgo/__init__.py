@@ -17,11 +17,13 @@ from .visualizers.array import (
     RadixLsdVisualizer,
     RadixMsdWordsVisualizer,
     SequentialSearchVisualizer,
+    SelectionVisualizer,
     SelectionSortVisualizer,
     ShellSortVisualizer,
     VerticalBubbleSortVisualizer,
 )
 from .visualizers.euler import EulerCircuitVisualizer
+from .visualizers.closest_pair import ClosestPairVisualizer
 from .visualizers.knight import KnightsTourVisualizer
 
 
@@ -55,6 +57,10 @@ def visualizer(name, enabled=True):
         return QuickSortVisualizer("Quick Sort")
     if name == "quick_sort_partition":
         return QuickSortVisualizer("Quick Sort: Partition").set_fine_sections(True)
+    if name == "selection":
+        return SelectionVisualizer("Selection")
+    if name == "closest_pair":
+        return ClosestPairVisualizer("Closest Pair")
     if name == "binary_tree_array":
         return BinaryTreeArrayVisualizer("Binary Tree in Array")
     if name == "heap_sort":
@@ -83,6 +89,7 @@ __all__ = [
     "BinarySearchVisualizer",
     "BinaryTreeArrayVisualizer",
     "CountSortVisualizer",
+    "ClosestPairVisualizer",
     "EulerCircuitVisualizer",
     "FindMaxVisualizer",
     "HeapSortVisualizer",
@@ -95,6 +102,7 @@ __all__ = [
     "RadixLsdVisualizer",
     "RadixMsdWordsVisualizer",
     "SequentialSearchVisualizer",
+    "SelectionVisualizer",
     "SelectionSortVisualizer",
     "ShellSortVisualizer",
     "VerticalBubbleSortVisualizer",
